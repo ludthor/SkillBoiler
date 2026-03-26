@@ -40,6 +40,10 @@ export function ImportDialog({
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
+    if (file.size > 1024 * 1024) {
+      setError("File is too large. Maximum size is 1 MB.")
+      return
+    }
     const reader = new FileReader()
     reader.onload = (event) => {
       const text = event.target?.result

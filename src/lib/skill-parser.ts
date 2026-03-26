@@ -63,7 +63,8 @@ export function parseSkillMarkdown(markdown: string): DraftSkill {
 }
 
 function extractYamlValue(yaml: string, key: string): string {
-  const regex = new RegExp(`^${key}:\\s*(.+)$`, "m")
+  const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const regex = new RegExp(`^${escapedKey}:\\s*(.+)$`, "m")
   const match = yaml.match(regex)
   if (!match) return ""
   let value = match[1].trim()
