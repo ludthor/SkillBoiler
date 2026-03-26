@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import { Header } from "@/components/layout/header"
 import { DashboardPage } from "@/pages/dashboard"
 import { CreatePage } from "@/pages/create"
@@ -7,7 +7,7 @@ import { PreviewPage } from "@/pages/preview"
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -19,6 +19,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

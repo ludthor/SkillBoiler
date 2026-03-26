@@ -2,6 +2,8 @@
 
 A single-page application that helps you build, validate, and export VS Code agent skills (SKILL.md files) with a structured, wizard-like UX.
 
+**Live Demo:** [https://ludthor.github.io/SkillBoiler/](https://ludthor.github.io/SkillBoiler/)
+
 ## Features
 
 - **5-Step Skill Builder Wizard** — Identity, Purpose & Usage, Guidelines, Configuration, Preview & Export
